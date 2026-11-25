@@ -11,7 +11,7 @@ import type { CSSProperties, PointerEvent, ReactNode } from 'react';
 const W = 1983;
 const H = 793;
 const P = 1800; // virtual perspective distance (design px)
-const src = (name: string, ext = 'webp') => `/legacy/${name}.${ext}`;
+const src = (name: string, ext = 'webp') => `${import.meta.env.BASE_URL}legacy/${name}.${ext}`;
 
 type Box = [number, number, number, number]; // x0, y0, x1, y1 in original image px
 

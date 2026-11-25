@@ -24,7 +24,7 @@ const NAMES = [
 
 const toClient = (name: string): Client => {
   const l = LOGOS[name];
-  return l ? { name, logo: `/clients/${l[0]}.jpg`, bg: l[1] } : { name };
+  return l ? { name, logo: `${import.meta.env.BASE_URL}clients/${l[0]}.jpg`, bg: l[1] } : { name };
 };
 /** Clients with a logo first, then text-only tiles. */
 export const clients: Client[] = [...NAMES.filter((n) => LOGOS[n]).map(toClient), ...NAMES.filter((n) => !LOGOS[n]).map(toClient)];
