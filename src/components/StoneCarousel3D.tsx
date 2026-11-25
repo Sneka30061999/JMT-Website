@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { motion, useMotionValue, useTransform, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface Stone {
   name: string;
@@ -39,7 +39,6 @@ export default function StoneCarousel3D() {
   const [activeIndex, setActiveIndex] = useState(1);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const dragX = useMotionValue(0);
 
   // Auto-rotate carousel
   useEffect(() => {
